@@ -6,11 +6,17 @@ import ExponentFour from "./components/ExponentFour";
 import ExponentFive from "./components/ExponentFive";
 import ExponentSix from "./components/ExponentSix";
 import { useState } from "react";
+import Exponent from "./components/Exponent";
 
 
 
 function App () {
   const [count, setCount] = useState(0);
+  const num = 0
+  const exponent = 0
+  const label = ""
+  
+
 
   const decrement = () => setCount((prevCount) => prevCount - 1);
   const increment = () => setCount((prevCount) => prevCount + 1);
@@ -30,21 +36,65 @@ function App () {
       <h2><em>Exponents</em></h2>
 
       <div className="container">
-        <ExponentTwo 
+      <Exponent 
+        num = {count}
+        exponent= {2}
         count={count}
-        setCount={setCount}/>
+        label = "n²"
+        calc = {`${count} * ${count}`}
+       />
+
+      <Exponent 
+        num = {count}
+        exponent= {3}
+        count={count}
+        label = "n³"
+        calc = {`${count} * ${count}* ${count}`}
+
+       />
+
+      <Exponent 
+        num = {count}
+        exponent= {4}
+        count={count}
+        label = "n⁴"
+        calc = {`${count} * ${count}* ${count}* ${count}`}
+
+       />
+       <Exponent 
+        num = {count}
+        exponent= {5}
+        count={count}
+        label = "n⁵"
+        calc = {`${count} * ${count}* ${count}* ${count}* ${count}`}
+
+       />
+
+      <Exponent 
+        num = {count}
+        exponent= {6}
+        count={count}
+        label = "n⁶"
+        calc = {`${count} * ${count}* ${count}* ${count}* ${count}* ${count}`}
+
+       />
+
+
+        {/* <ExponentTwo 
+        count={count}
+        />
         <ExponentThree 
         count={count}
-        setCount={setCount}/>
+        />
         <ExponentFour 
         count={count}
-        setCount={setCount}/>
+        />
         <ExponentFive 
         count={count}
-        setCount={setCount}/>
+        />
         <ExponentSix 
         count={count}
-        setCount={setCount}/>
+        /> */}
       </div>
     </div>
   );
